@@ -1,9 +1,13 @@
+import { View, Text } from 'react-native'
 import React from 'react'
 
-function +html() {
+function html() {
   return (
-    <div>+html</div>
+    <View>
+      <Text>html</Text>
+    </View>
   )
 }
 
-export default +html
+
+export default html
