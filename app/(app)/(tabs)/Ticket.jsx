@@ -1,13 +1,12 @@
 import { View, Text } from 'react-native'
 import React from 'react'
 
-function html() {
+function Ticket() {
   return (
     <View>
-      <Text>html</Text>
+      <Text>Ticket</Text>
     </View>
   )
 }
 
-
-export default html
+export default Ticket
