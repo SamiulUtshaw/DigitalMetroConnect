@@ -74,7 +74,7 @@ export default function Home() {
                             <Text style={styles.cardTitle}>Dhaka Metro Rapid Pass</Text>
                             <Ionicons name="subway-outline" size={24} color="#232323" />
                         </View>
-                        <Text style={styles.cardNumber}>{rapidpass}</Text>
+                        <Text style={styles.cardNumber}>RP {rapidpass}</Text>
                         <View style={styles.balanceContainer}>
                             <Text style={styles.balanceLabel}>Available Balance</Text>
                             <Text style={styles.balanceAmount}>BDT {parseFloat(balance).toFixed(2)}</Text>
