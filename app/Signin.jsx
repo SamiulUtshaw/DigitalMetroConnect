@@ -144,7 +144,7 @@ const styles = StyleSheet.create({
   },
   waveContainer: {
     height: 240,
-    backgroundColor: 'teal',
+    backgroundColor: '#EEDF7A',
     borderBottomLeftRadius: 30,
     borderBottomRightRadius: 30,
     justifyContent: 'center',
