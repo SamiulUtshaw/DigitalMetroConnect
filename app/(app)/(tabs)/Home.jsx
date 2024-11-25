@@ -52,6 +52,8 @@ export default function Home() {
   let [fontsLoaded] = useFonts({
     'poppins-regular': require('../../../assets/fonts/NeueHaasDisplayRoman.ttf'),
     'poppins-semibold': require('../../../assets/fonts/NeueHaasDisplayMediu.ttf'),
+    'neue-regular': require('../../../assets/fonts/NeueHaasDisplayRoman.ttf'),
+    'neue-semibold': require('../../../assets/fonts/NeueHaasDisplayMediu.ttf'),
   })
 
   if (!fontsLoaded) {
@@ -197,7 +199,7 @@ cardHeader: {
 cardTitle: {
     color: '#232323',
     fontSize: 20,
-    fontFamily: 'poppins-semibold',
+    fontFamily: 'neue-semibold',
 },
 cardNumber: {
     color: '#232323',
@@ -218,20 +220,20 @@ balanceLabel: {
 balanceAmount: {
     color: '#232323',
     fontSize: 24,
-    fontFamily: 'poppins-semibold',
+    fontFamily: 'neue-semibold',
     marginTop: 5,
 },
   heading: {
     color: '#232323',
     fontSize: 24,
-    fontFamily: 'poppins-semibold',
+    fontFamily: 'neue-semibold',
     marginBottom: 16,
   },
   subheading: {
     fontSize: 16,
     color: '#232323',
     marginBottom: 8,
-    fontFamily: 'poppins-regular',
+    fontFamily: 'neue-regular',
   },
   searchBar: {
     flexDirection: 'row',
@@ -270,7 +272,7 @@ balanceAmount: {
   menuText: {
     fontSize: 16,
     color: '#333',
-    fontFamily: 'poppins-semibold',
+    fontFamily: 'neue-semibold',
   },
   frequentSection: {
     padding: 16,
@@ -279,7 +281,7 @@ balanceAmount: {
     fontSize: 20,
     fontWeight: '600',
     marginBottom: 16,
-    fontFamily: 'poppins-semibold',
+    fontFamily: 'neue-semibold',
   },
   journeyCard: {
     backgroundColor: '#fff',
@@ -316,7 +318,7 @@ balanceAmount: {
   statusText: {
     color: '#4CAF50',
     fontSize: 12,
-    fontFamily: 'poppins-semibold',
+    fontFamily: 'neue-semibold',
   },
   trainContainer: {
     alignItems: 'flex-end',
@@ -325,15 +327,15 @@ balanceAmount: {
     fontSize: 12,
     color: '#666',
     marginBottom: 4,
-    fontFamily: 'poppins-regular',
+    fontFamily: 'neue-regular',
   },
   time: {
     fontSize: 16,
-    fontFamily: 'poppins-semibold',
+    fontFamily: 'neue-semibold',
   },
   trainNumber: {
     fontSize: 16,
-    fontFamily: 'poppins-semibold',
+    fontFamily: 'neue-semibold',
   },
   stationContainer: {
     marginBottom: 24,
@@ -372,7 +374,7 @@ balanceAmount: {
   stationText: {
     fontSize: 16,
     color: '#333',
-    fontFamily: 'poppins-semibold',
+    fontFamily: 'neue-semibold',
   },
   bookButton: {
     backgroundColor: '#4CAF50',
@@ -383,6 +385,6 @@ balanceAmount: {
   bookButtonText: {
     color: '#fff',
     fontSize: 16,
-    fontFamily: 'poppins-semibold',
+    fontFamily: 'neue-semibold',
   },
 })
