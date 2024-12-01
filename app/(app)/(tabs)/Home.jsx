@@ -7,7 +7,7 @@ import { useFonts } from 'expo-font'
 import { doc, getDoc } from 'firebase/firestore'
 import { db } from '../../../firebaseConfig'
 import AsyncStorage from '@react-native-async-storage/async-storage';
-
+import { useFocusEffect } from '@react-navigation/native';
 
 
 
@@ -22,31 +22,36 @@ export default function Home() {
 
   
 
-  useEffect(() => {
-    const loadUserData = async () => {
-      try {
-        const storedUserData = await AsyncStorage.getItem('userData');
-        if (storedUserData) {
-          const userData = JSON.parse(storedUserData);
-          setBalance(userData.balance || '');
-          setRapidpass(userData.rapidpass || '');
-        } else if (user && user.userId) {
-          const userDoc = doc(db, `users/${user.userId}`);
-          const docSnapshot = await getDoc(userDoc);
-          if (docSnapshot.exists()) {
-            const userData = docSnapshot.data();
+  useFocusEffect(
+    React.useCallback(() => {
+      const fetchUserData = async () => {
+        try {
+          await AsyncStorage.removeItem('userData'); // Invalidate cache for fresh fetch
+          const storedUserData = await AsyncStorage.getItem('userData');
+          if (storedUserData) {
+            const userData = JSON.parse(storedUserData);
+            console.log('Data from AsyncStorage:', userData);
             setBalance(userData.balance || '');
             setRapidpass(userData.rapidpass || '');
-            await AsyncStorage.setItem('userData', JSON.stringify(userData));
+          } else if (user && user.userId) {
+            const userDoc = doc(db, `users/${user.userId}`);
+            const docSnapshot = await getDoc(userDoc);
+            if (docSnapshot.exists()) {
+              const userData = docSnapshot.data();
+              setBalance(userData.balance || '');
+              setRapidpass(userData.rapidpass || '');
+              await AsyncStorage.setItem('userData', JSON.stringify(userData));
+            }
           }
+        } catch (error) {
+          console.error('Error loading user data:', error);
         }
-      } catch (error) {
-        console.error('Error loading user data:', error);
-      }
-    };
-
-    loadUserData();
-  }, [user]);
+      };
+  
+      fetchUserData();
+    }, [user])
+  );
+  
 
 
   let [fontsLoaded] = useFonts({
