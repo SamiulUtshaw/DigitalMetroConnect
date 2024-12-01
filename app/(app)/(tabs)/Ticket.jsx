@@ -119,8 +119,8 @@ export default function Ticket() {
   };
 
   let [fontsLoaded] = useFonts({
-    'poppins-regular': require('../../../assets/fonts/Poppins-Regular.ttf'),
-    'poppins-semibold': require('../../../assets/fonts/Poppins-SemiBold.ttf'),
+    'poppins-regular': require('../../../assets/fonts/NeueHaasDisplayRoman.ttf'),
+    'poppins-semibold': require('../../../assets/fonts/NeueHaasDisplayMediu.ttf'),
 
   })
 
