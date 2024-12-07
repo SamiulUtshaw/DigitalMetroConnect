@@ -37,7 +37,7 @@ export default function Journey() {
   const getStatusColor = (status) => {
     switch (status.toLowerCase()) {
       case 'running':
-        return '#FF9B57';
+        return '#007BFF';
       case 'complete':
         return '#4CAF50';
       case 'cancel':
@@ -50,7 +50,7 @@ export default function Journey() {
   const getActionButton = (status) => {
     switch (status.toLowerCase()) {
       case 'running':
-        return { text: 'Details', color: '#FF9B57' };
+        return { text: 'Details', color: '#007BFF' };
       case 'complete':
         return { text: 'Book Again', color: '#4CAF50' };
       case 'cancel':
