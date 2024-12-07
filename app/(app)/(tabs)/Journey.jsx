@@ -41,7 +41,7 @@ export default function Journey() {
       case 'complete':
         return '#4CAF50';
       case 'cancel':
-        return '#FF4081';
+        return '#FF5733';
       default:
         return '#000000';
     }
@@ -54,7 +54,7 @@ export default function Journey() {
       case 'complete':
         return { text: 'Book Again', color: '#4CAF50' };
       case 'cancel':
-        return { text: 'Try Again', color: '#FF4081' };
+        return { text: 'Try Again', color: '#FF5733' };
       default:
         return { text: '', color: '#000000' };
     }
